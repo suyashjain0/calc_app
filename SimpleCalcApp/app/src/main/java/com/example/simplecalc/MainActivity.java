@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     private EditText input1, input2;
     private TextView resultText;
-    private Button addButton, subtractButton;
+    private Button addButton, subtractButton, multiplyButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         resultText = findViewById(R.id.resultText);
         addButton = findViewById(R.id.addButton);
         subtractButton = findViewById(R.id.subtractButton);
+        multiplyButton = findViewById(R.id.multiplyButton);
 
         // Set click listeners
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 performSubtraction();
+            }
+        });
+
+        multiplyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performMultiplication();
             }
         });
     }
@@ -56,7 +64,24 @@ public class MainActivity extends AppCompatActivity {
         try {
             double num1 = Double.parseDouble(input1.getText().toString());
             double num2 = Double.parseDouble(input2.getText().toString());
-            double result = num1 - num2;
+            
+            if (num1 > num2) {
+                double result = num1 - num2;
+                resultText.setText("Result: " + result);
+            } else {
+                Toast.makeText(this, "Subtraction only works when first number > second number", Toast.LENGTH_LONG).show();
+                resultText.setText("Result: Invalid (A must be > B)");
+            }
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Please enter valid numbers", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void performMultiplication() {
+        try {
+            double num1 = Double.parseDouble(input1.getText().toString());
+            double num2 = Double.parseDouble(input2.getText().toString());
+            double result = num1 * num2;
             resultText.setText("Result: " + result);
         } catch (NumberFormatException e) {
             Toast.makeText(this, "Please enter valid numbers", Toast.LENGTH_SHORT).show();

@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginBottom="24dp">
+        android:layout_marginBottom="8dp">
 
         <Button
             android:id="@+id/addButton"
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Add"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="4dp"
             android:background="@android:color/holo_blue_dark"
             android:textColor="@android:color/white" />
 
@@ -56,8 +56,25 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Subtract"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             android:background="@android:color/holo_red_dark"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/multiplyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multiply"
+            android:background="@android:color/holo_green_dark"
             android:textColor="@android:color/white" />
 
     </LinearLayout>

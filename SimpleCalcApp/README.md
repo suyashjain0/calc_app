@@ -1,17 +1,19 @@
-# SimpleCalcApp v1.0
+# SimpleCalcApp v1.1
 
 A simple Android calculator application that performs basic arithmetic operations.
 
 ## App Purpose
 
-SimpleCalcApp is a lightweight calculator designed for basic mathematical operations. It provides a clean, intuitive interface for performing addition and subtraction calculations.
+SimpleCalcApp is a lightweight calculator designed for basic mathematical operations. It provides a clean, intuitive interface for performing addition, subtraction, and multiplication calculations.
 
 ## Features
 
 - **Addition**: Add two numbers together
-- **Subtraction**: Subtract the second number from the first number
+- **Subtraction**: Subtract the second number from the first number (only when first number > second number)
+- **Multiplication**: Multiply two numbers together
 - **Input Validation**: Handles invalid input gracefully with user-friendly error messages
-- **Clean UI**: Simple and intuitive user interface
+- **Conditional Logic**: Subtraction operation includes validation to ensure positive results
+- **Clean UI**: Simple and intuitive user interface with color-coded buttons
 
 ## How to Build/Run
 
@@ -57,8 +59,9 @@ SimpleCalcApp is a lightweight calculator designed for basic mathematical operat
 
 1. Enter the first number in the top input field
 2. Enter the second number in the bottom input field
-3. Click "Add" to perform addition or "Subtract" to perform subtraction
-4. View the result in the result display area
+3. Click "Add" to perform addition, "Subtract" to perform subtraction, or "Multiply" to perform multiplication
+4. Note: Subtraction only works when the first number is greater than the second number
+5. View the result in the result display area
 
 ## Project Structure
 
@@ -80,8 +83,8 @@ SimpleCalcApp/
 
 ## Version Information
 
-- **Current Version**: v1.0
-- **Release Date**: Initial Release
+- **Current Version**: v1.1
+- **Release Date**: Feature Update
 - **Minimum SDK**: API 21 (Android 5.0)
 - **Target SDK**: API 33 (Android 13)
 
